@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PlayingCard {
+public class main {
     public static void main(String[] args) {
 
         int cardsPerPlayer = 5; // Инициализация переменных
