@@ -32,6 +32,10 @@ public class PlayingCard {
                     }
                 }
 
+            } else{
+                System.out.println("Ошибка!");
+
             }
+        }
     }
 }
