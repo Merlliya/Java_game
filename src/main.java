@@ -37,5 +37,14 @@ public class PlayingCard {
 
             }
         }
+
+        String[] deck = new String[n]; // Инициализация колоды
+        for (int i = 0; i < RANK_LIST.length; i++) {
+            for (int j = 0; j < SUITS_LIST.length; j++) {
+                deck[SUITS_LIST.length*i + j] = RANK_LIST[i] + " " + SUITS_LIST[j];
+            }
+        }
+
+        
     }
 }
