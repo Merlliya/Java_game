@@ -45,6 +45,17 @@ public class PlayingCard {
             }
         }
 
-        
+        for (int i = 0; i < n; i++) {  // Перетасовка колоды
+            int r = i + (int) (Math.random() * (n-i)); // Случайная карта
+            String temp = deck[r];
+            deck[r] = deck[i];
+            deck[i] = temp;
+        }
+
+        for (int i = 0; i < players * cardsPerPlayer; i++) { // Перетасованная колода выводится на экран
+            System.out.println(deck[i]);
+            if (i % cardsPerPlayer == cardsPerPlayer - 1)
+                System.out.println();
+        }
     }
 }
