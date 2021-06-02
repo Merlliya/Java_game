@@ -14,6 +14,24 @@ public class PlayingCard {
         };
         int n = SUITS_LIST.length * RANK_LIST.length; // Кол-во карт
 
-        
+        for(;;){	// Ввод с консоли
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Введите кол-во игроков: ");
+            if(sc.hasNextInt()){
+                players = sc.nextInt();
+                if(cardsPerPlayer * players <= n){
+                    break;
+                } else {
+                    if (players ==0){
+                        System.out.println("Игра окончена!");
+                        break;
+                    } else if (players<0){
+                        System.out.println("Число игроков не может быть < 0!");
+                    } else{
+                        System.out.println("Слишком много игроков!");
+                    }
+                }
+
+            }
     }
 }
